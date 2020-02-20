@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class TestNames {
+
+	public static void main(String[] args) {
+		
+		Scanner reply = new Scanner(System.in);
+		String first, middle, last;
+		
+		//Prompt user for their name
+		System.out.println("Please enter the first name, the middle name, and then the last name.");
+		first = reply.nextLine();
+		middle = reply.nextLine();
+		last = reply.nextLine();
+		Name user = new Name(first, middle, last);
+		
+		//Print out user's name in various ways
+		System.out.println("Your name is " + user.FirstMiddleLast());
+		System.out.println("It can also be written as " + user.LastFirstMiddle());
+		System.out.println("Your initials are " + user.getInitials());
+		System.out.println("Your name has " + user.length() + " characters in it.");
+	}
+
+}

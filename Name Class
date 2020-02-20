@@ -19,29 +19,29 @@ public class Name {
 
 //Returns first name 
 	public String getFirst() {
-		return this.first;
+		return first;
 	}
 
 //Returns middle name
 	public String getMiddle() {
-		return this.middle;
+		return middle;
 	}
 
 //Returns last name
 	public String getLast() {
-		return this.last;
+		return last;
 	}
 
 //Returns full name in usual order
 	public String FirstMiddleLast() {
 
-		return this.first + " " + this.middle + " " + this.last;
+		return first + " " +middle + " " + last;
 	}
 
 //Returns name in Last, First Middle order
 	public String LastFirstMiddle() {
 
-		return this.last + ", " + this.first + " " + this.middle;
+		return last + ", " + first + " " + middle;
 	}
 
 //Returns true if two names are equal
@@ -56,7 +56,7 @@ public class Name {
 //Returns initials of a name
 	public String getInitials() {
 
-		String full = this.first + " " + this.middle + " " + this.last;
+		String full = first + " " + middle + " " + last;
 		String initials = "";
 		// Loop checks every character for a space and concatenates the uppercase
 		// character after it
@@ -70,7 +70,7 @@ public class Name {
 	// Returns the length of the full name
 	public int length() {
 
-		String full = this.first + " " + this.middle + " " + this.last;
+		String full = first + " " + middle + " " + last;
 		int length = 0;
 		for (int i = 0; i < full.length() - 1; i++) {
 			if (!(full.charAt(i) == ' '))

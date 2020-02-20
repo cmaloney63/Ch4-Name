@@ -1,0 +1,82 @@
+/*
+ * This class represents a student's first last and middle names
+ * Cameron Maloney
+ * 2/20/2020
+ */
+public class Name {
+
+	private String first;
+	private String middle;
+	private String last;
+
+	public Name(String first, String middle, String last) {
+
+		this.first = first;
+		this.middle = middle;
+		this.last = last;
+
+	}
+
+//Returns first name 
+	public String getFirst() {
+		return this.first;
+	}
+
+//Returns middle name
+	public String getMiddle() {
+		return this.middle;
+	}
+
+//Returns last name
+	public String getLast() {
+		return this.last;
+	}
+
+//Returns full name in usual order
+	public String FirstMiddleLast() {
+
+		return this.first + " " + this.middle + " " + this.last;
+	}
+
+//Returns name in Last, First Middle order
+	public String LastFirstMiddle() {
+
+		return this.last + ", " + this.first + " " + this.middle;
+	}
+
+//Returns true if two names are equal
+	public boolean equals(String name1, String name2) {
+
+		if (name1.equalsIgnoreCase(name2))
+			return true;
+		else
+			return false;
+	}
+
+//Returns initials of a name
+	public String getInitials() {
+
+		String full = this.first + " " + this.middle + " " + this.last;
+		String initials = "";
+		// Loop checks every character for a space and concatenates the uppercase
+		// character after it
+		for (int i = 0; i < full.length() - 1; i++) {
+			if (full.charAt(i) == ' ')
+				initials += Character.toUpperCase(full.charAt(i + 1));
+		}
+		return initials;
+	}
+
+	// Returns the length of the full name
+	public int length() {
+
+		String full = this.first + " " + this.middle + " " + this.last;
+		int length = 0;
+		for (int i = 0; i < full.length() - 1; i++) {
+			if (!(full.charAt(i) == ' '))
+				length++;
+		}
+		return length;
+
+	}
+}
